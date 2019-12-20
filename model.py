@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
 
-dataset = pd.read_csv("C:\\Users\\sai thapan ragipani\\flask deployment\\hiring.csv")
+dataset = pd.read_csv("hiring.csv")
 
 dataset['experience'].fillna(0,inplace = True)
 dataset['test_score'].fillna(dataset['test_score'].mean(),inplace=True)
@@ -44,6 +44,6 @@ pickle.dump(regressor,open('model.pkl','wb'))
 
 
 # loading the model to compare the results
-with open('C:\\Users\\sai thapan ragipani\\flask deployment\\model.pkl', 'rb') as f:
+with open('model.pkl', 'rb') as f:
     model=pickle.load(f)
     
